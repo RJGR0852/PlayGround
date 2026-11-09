@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta name="theme-color" content="#101a18">
+<title>Mythos: The Last Flame</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="game"><canvas id="scene"></canvas>
+<div class="vignette"></div>
+<header class="topbar"><div class="brand"><div class="brand-mark">✦</div><div><span class="brand-name">MYTHOS</span><span class="brand-sub">THE LAST FLAME</span></div></div><div class="top-right"><div class="day-pill"><span class="sun-icon">☼</span> DAY <b id="day-count">I</b></div><button id="sound-btn" class="icon-btn" aria-label="Toggle sound">♫</button><button id="help-btn" class="icon-btn" aria-label="Controls">?</button></div></header>
+<section class="quest-card panel"><div class="eyebrow"><span class="quest-dot"></span> FATE'S THREAD</div><h2 id="quest-title">A SPARK IN THE WILD</h2><p id="quest-copy">The old ways are fading. Gather what the land gives freely.</p><div class="quest-progress"><span id="quest-progress">Gather branches and stone</span><span id="quest-count">0 / 3</span></div><div class="progress-track"><i id="quest-bar"></i></div></section>
+<div class="status-stack"><div class="stat-card panel"><span class="stat-icon heart">♥</span><div class="stat-info"><span>VITALITY</span><div class="meter"><i id="health-fill" class="health-fill"></i></div></div><b id="health-value">100</b></div><div class="stat-card panel"><span class="stat-icon stamina">ϟ</span><div class="stat-info"><span>STAMINA</span><div class="meter"><i id="stamina-fill" class="stamina-fill"></i></div></div><b id="stamina-value">100</b></div></div>
+<div class="biome-tag"><span class="biome-line"></span><div><small>YOU ARE IN</small><strong id="biome-name">THE OLIVE WOODS</strong></div><span class="biome-line"></span></div>
+<div class="inventory panel"><div class="inventory-head"><span>YOUR SATCHEL</span><span class="weight" id="weight-label">FIELD KIT</span></div><div class="item-list"><div class="item"><span class="item-icon wood-icon">♧</span><span>Wood</span><b id="wood-count">0</b></div><div class="item"><span class="item-icon stone-icon">◆</span><span>Stone</span><b id="stone-count">0</b></div><div class="item"><span class="item-icon shard-icon">✧</span><span>Ember</span><b id="shard-count">0</b></div></div></div>
+<div id="toast" class="toast"></div><div id="interact-prompt" class="interact-prompt"><span class="keycap">E</span><span id="prompt-text">Gather</span></div>
+<div class="crosshair"><i></i><i></i></div>
+<div class="bottom-hint"><span>WASD</span> MOVE <i>·</i> <span>SPACE</span> DODGE <i>·</i> <span>CLICK</span> STRIKE <i>·</i> <span>E</span> GATHER</div>
+<div class="mobile-controls"><div id="stick-zone" class="stick-zone"><div id="stick" class="stick"><i></i></div></div><div class="mobile-actions"><button id="mobile-dodge" class="touch-action">DODGE</button><button id="mobile-hit" class="touch-action hit-action">STRIKE</button><button id="mobile-use" class="touch-action">GATHER</button></div></div>
+<div id="start-screen" class="screen visible"><div class="start-art"></div><div class="start-content"><div class="overline"><span></span> A GREEK MYTHOLOGY SURVIVAL ADVENTURE <span></span></div><h1>MYTHOS</h1><div class="subtitle">THE LAST <em>FLAME</em></div><p class="intro">The gods have fallen silent. Beyond the olive groves, an ancient light is waiting to be rekindled.</p><button id="start-btn" class="primary-btn">ENTER THE WILDS <span>↗</span></button><div class="start-foot"><span>✦</span> EXPLORE · GATHER · SURVIVE <span>✦</span></div></div><div class="version">AN ODYSSEY IN FOUR REALMS</div></div>
+<div id="help-modal" class="modal"><div class="modal-card"><button id="close-help" class="close-btn">×</button><span class="eyebrow">A WORD BEFORE YOU GO</span><h2>Survive the old world.</h2><p>Gather wood and stone from the wilds. The deeper you travel, the more dangerous the land becomes. Shades guard the ember fragments in the hills and Elysium.</p><div class="help-grid"><div><b>WASD / JOYSTICK</b><span>Move through the world</span></div><div><b>CLICK / STRIKE</b><span>Attack nearby shades</span></div><div><b>SPACE / DODGE</b><span>Evade danger</span></div><div><b>E / GATHER</b><span>Gather resources & awaken the altar</span></div></div><button id="resume-btn" class="primary-btn">I UNDERSTAND <span>↗</span></button></div></div>
+<div id="end-screen" class="screen"><div class="end-card"><div class="end-symbol">✦</div><div class="overline">THE OLD WORLD REMEMBERS</div><h2 id="end-title">THE FLAME RETURNS</h2><p id="end-copy">A new dawn breaks over the four realms.</p><button id="again-btn" class="primary-btn">WALK THE REALMS AGAIN <span>↗</span></button></div></div>
+</main>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"}}</script>
+<script type="module" src="game.js"></script>
+</body></html>
